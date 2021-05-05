@@ -1,11 +1,7 @@
 <% articles.forEach(function(article) { %>
-    <article style="width: 300px;">
-        <img src=<%=article.url_img %> style="width: 100%;" alt="image">
-        <h2 style="width: 100%;text-align: center;">
-            <%= article.title %>
-        </h2>
-        <p style="width: 100%;text-align: center;">
-            <%= article.description %>
-        </p>
-    </article>
-<% }); %>
+<article style="width: 300px">
+  <img src="<%" ="article.url_img" % /> style="width: 100%;" alt="image">
+  <h2 style="width: 100%; text-align: center"><%= article.title %></h2>
+  <p style="width: 100%; text-align: center"><%= article.description %></p>
+  <% }); %>
+</article>

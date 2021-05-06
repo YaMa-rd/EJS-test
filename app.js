@@ -48,7 +48,7 @@ app.get("/", (req, res) => {
       description:
         "Saturne est la deuxième planète la plus massive du Système solaire, d'une masse 3,3 fois moindre que Jupiter, mais 5,5 fois supérieure à celle de Neptune et 6,5 fois supérieure à celle d'Uranus.",
       url_img:
-        "https://fr.wikipedia.org/wiki/Saturne_(plan%C3%A8te)#/media/Fichier:Saturn_Storm.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/29/Saturn_Storm.jpg",
     },
     {
       title: "Uranus",

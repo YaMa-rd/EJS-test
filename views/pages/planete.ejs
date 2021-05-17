@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../includes/head'); %>
+</head>
+
+<body>
+    <%- include('../includes/header'); %>
+        <main>
+            <article style="width: 300px;">
+                <img src=<%= planete.link %> style="width: 100%;" alt="image">
+                <h2 style="width: 100%;text-align: center;">
+                    <%= planete.title %>
+                </h2>
+                <p style="width: 100%;text-align: center;">
+                    <%= planete.description %>
+                </p>
+            </article>
+        </main>
+        <%- include('../includes/footer'); %>
+</body>
+
+</html>

@@ -15,7 +15,7 @@ const adminRoutes = require('./routes/admin');
 
 app.use(planeteRoutes);
 
-app.use('/admin', adminRoutes)
+app.use('/admin', adminRoutes);
 
 app.get('/', function(req, res) {
     res.render('./pages/index');

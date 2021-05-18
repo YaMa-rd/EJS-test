@@ -1,8 +1,15 @@
 const fs = require('fs');
+const path = require('path');
+const Cart = require('./cart');
+
+const dataPlanetePath = path.join(
+    path.dirname(process.mainModule.filename),
+    'data',
+    'planetes.json'
+);
 
 const getPlanetesFromFile = (cb) => {
-
-    fs.readFile('./data/planetes.json', (error, fileContent) => {
+    fs.readFile(dataPlanetePath, (error, fileContent) => {
         if (error) return cb([]);
         else  cb(JSON.parse(fileContent));
     });
@@ -10,11 +17,12 @@ const getPlanetesFromFile = (cb) => {
 
 module.exports = class Planete
 {
-    constructor(title, description, link, id)
+    constructor(title, description, link, price, id)
     {
         this.title = title;
         this.description = description;
         this.link = link;
+        this.price = price;
         this.id = id;
     }
 
@@ -23,13 +31,12 @@ module.exports = class Planete
             {
             this.id = `${planetes.length}`;
             planetes.push(this);
-            fs.writeFile('./data/planetes.json', JSON.stringify(planetes), (error) =>
+            fs.writeFile(dataPlanetePath, JSON.stringify(planetes), (error) =>
             {
                 console.log(error);
             });
         });
     }
-
     static fetchAll(cb)
     {
         getPlanetesFromFile(cb);
@@ -42,4 +49,6 @@ module.exports = class Planete
             cb(planete);
         });
     }
+
+    
 }

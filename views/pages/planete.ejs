@@ -8,7 +8,7 @@
 <body>
     <%- include('../includes/header'); %>
         <main>
-            <article style="width: 300px;">
+            <article style="width: 300px; margin: 20px auto;">
                 <img src=<%= planete.link %> style="width: 100%;" alt="image">
                 <h2 style="width: 100%;text-align: center;">
                     <%= planete.title %>
@@ -16,6 +16,11 @@
                 <p style="width: 100%;text-align: center;">
                     <%= planete.description %>
                 </p>
+                
+                <div  class="d-flex flex-row justify-content-center flex-wrap">
+                    <button>Edit</button>
+                    <button>Delet</button>
+                </div>
             </article>
         </main>
         <%- include('../includes/footer'); %>
